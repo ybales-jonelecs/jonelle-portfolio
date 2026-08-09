@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio | Jonelle Ybales</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+:root{--bg:#07080b;--panel:#0e1016;--text:#f7f7fb;--muted:#9da3b2;--line:#242936;--accent:#8b5cf6;--cyan:#22d3ee}*{box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 15% 10%,#8b5cf626,transparent 30%),radial-gradient(circle at 85% 30%,#22d3ee17,transparent 28%)}body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.16;background-image:linear-gradient(#fff1 1px,transparent 1px),linear-gradient(90deg,#fff1 1px,transparent 1px);background-size:50px 50px}a{color:inherit;text-decoration:none}.navbar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#07080bbd;backdrop-filter:blur(18px);border-bottom:1px solid #fff1}.logo{font-size:1.45rem;font-weight:900}.logo span,.eyebrow,h1 span{color:var(--accent)}nav{display:flex;gap:30px}nav a{color:var(--muted);font-size:.9rem;font-weight:600;position:relative;transition:.25s}nav a:after{content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--accent);transition:.25s}nav a:hover{color:#fff}nav a:hover:after{width:100%}.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.5rem}.hero{min-height:calc(100vh - 70px);display:grid;grid-template-columns:1.35fr .75fr;align-items:center;gap:70px;padding:80px 10%}.hero-text{animation:up .9s ease both}.eyebrow{font-size:.72rem;letter-spacing:.2em;font-weight:800;margin-bottom:14px}h1{font-size:clamp(3.8rem,8vw,7.5rem);line-height:.9;letter-spacing:-.075em}h1 span{display:inline-block;animation:float 4s ease-in-out infinite}.intro{max-width:650px;color:var(--muted);font-size:1.05rem;margin:30px 0}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;border-radius:11px;padding:13px 21px;font-weight:800;cursor:pointer;font-size:.9rem;transition:.25s}.primary{background:linear-gradient(135deg,var(--accent),#6d4bf4);color:#fff;box-shadow:0 10px 35px #8b5cf633}.primary:hover{transform:translateY(-3px);box-shadow:0 15px 45px #8b5cf655}.secondary{border:1px solid var(--line);background:#ffffff05}.secondary:hover{transform:translateY(-3px);border-color:#555c6d}.profile-card{background:linear-gradient(145deg,#181b26e6,#0a0b10e6);border:1px solid #fff2;border-radius:30px;padding:45px;text-align:center;box-shadow:0 35px 100px #00000073;animation:card .9s .15s ease both}.avatar{width:155px;height:155px;border-radius:50%;margin:0 auto 25px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--cyan));font-size:3rem;font-weight:900;box-shadow:0 0 0 8px #8b5cf614,0 20px 55px #8b5cf64d;animation:float 4s ease-in-out infinite}.profile-card p,.section-text,.card p,.project p{color:var(--muted)}.section{padding:110px 10%;max-width:1250px;margin:auto}.section h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.05em;margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}.stats div{border-top:1px solid var(--line);padding-top:18px;transition:.3s}.stats div:hover{transform:translateY(-5px)}.stats strong{display:block;font-size:2rem}.stats span{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.card{padding:30px;background:#0e1016b8;border:1px solid var(--line);border-radius:20px;transition:.35s;overflow:hidden}.card:hover{transform:translateY(-10px);border-color:#4b5262;box-shadow:0 20px 50px #0000004d}.icon{font-size:2rem;color:var(--accent);margin-bottom:20px}.card h3{margin-bottom:8px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}.tags span,.project-label{font-size:.7rem;padding:5px 9px;border:1px solid var(--line);border-radius:20px;color:#c8cad0}.projects{display:grid;gap:15px;margin-top:40px}.project{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:27px;background:#0e1016b8;border:1px solid var(--line);border-radius:20px;transition:.3s}.project:hover{transform:translateX(8px);border-color:#4b5262}.project-number{font-size:1.6rem;font-weight:900;color:var(--accent)}.project-label{display:inline-block;margin-top:14px}.contact{padding-bottom:130px}.contact form{display:grid;gap:12px;max-width:650px;margin-top:35px}input,textarea{width:100%;background:#0b0d12;color:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;font:inherit;outline:none;transition:.25s}input:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px #8b5cf61a}.status{margin-top:15px;color:#a78bfa;min-height:24px}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.social-link{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:#ffffff05;color:#d9dbe3;font-weight:700;font-size:.85rem;transition:.25s}
+.social-link:hover{transform:translateY(-3px);border-color:var(--accent);color:#fff;background:#8b5cf612}
+.social-icon{font-size:1.05rem}
+.contact-note{color:var(--muted);font-size:.85rem;margin-top:8px}
+@media(max-width:750px){.social-link{padding:9px 12px}}footer{text-align:center;padding:30px 7%;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}.reveal{opacity:0;transform:translateY(35px);transition:.8s}.reveal.visible{opacity:1;transform:none}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes card{from{opacity:0;transform:translateX(35px) scale(.97)}to{opacity:1;transform:none}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@media(max-width:750px){.navbar{padding:17px 6%}.menu-btn{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;padding:20px 6%;background:#090a0e;flex-direction:column;gap:15px}nav.open{display:flex}.hero{grid-template-columns:1fr;padding:65px 7%;gap:55px}.profile-card{max-width:400px;margin:auto}.section{padding:80px 7%}.cards,.stats{grid-template-columns:1fr}.project{grid-template-columns:55px 1fr}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style></head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">JY<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#resources">Resources</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">COMPUTER SCIENCE STUDENT</p>
+        <h1>Hi, I'm <span>Jonelle.</span></h1>
+        <p class="intro">I’m a Computer Science student who enjoys learning programming, building useful projects, and improving my skills through hands-on work.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#projects">View My Work</a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="profile-card">
+        <div class="avatar">JY</div>
+        <h2>Jonelle N. Ybales</h2>
+        <p>Computer Science Student</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <p class="eyebrow">ABOUT ME</p>
+      <h2>Learning today, building tomorrow.</h2>
+      <p class="section-text">I'm currently studying Computer Science and developing my foundation in programming, object-oriented programming, algorithms, and data structures. My goal is to keep learning and create projects that solve real problems.</p>
+      <div class="stats">
+        <div><strong>01</strong><span>Curious Learner</span></div>
+        <div><strong>02</strong><span>Problem Solver</span></div>
+        <div><strong>03</strong><span>Future Developer</span></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="eyebrow">MY SKILLS</p>
+      <h2>What I'm learning</h2>
+      <div class="cards">
+        <article class="card"><div class="icon">&lt;/&gt;</div><h3>Programming</h3><p>Building programs and practicing clean, logical code.</p><div class="tags"><span>Java</span><span>OOP</span></div></article>
+        <article class="card"><div class="icon">⌘</div><h3>Problem Solving</h3><p>Learning algorithms and data structures to approach problems efficiently.</p><div class="tags"><span>Algorithms</span><span>Logic</span></div></article>
+        <article class="card"><div class="icon">◈</div><h3>Web Development</h3><p>Creating responsive and interactive websites using modern web basics.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div></article>
+      </div>
+    </section>
+
+
+    <section id="resources" class="section">
+      <p class="eyebrow">RESOURCES</p>
+      <h2>Useful learning resources.</h2>
+      <p class="section-text">A few places I use for learning programming, Computer Science, and web development.</p>
+      <div class="cards">
+        <a class="card" href="https://developer.mozilla.org/" target="_blank" rel="noopener">
+          <div class="icon">🌐</div>
+          <h3>MDN Web Docs</h3>
+          <p>HTML, CSS, JavaScript, and web development documentation.</p>
+          <div class="tags"><span>WEB</span><span>JAVASCRIPT</span></div>
+        </a>
+        <a class="card" href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener">
+          <div class="icon">📚</div>
+          <h3>GeeksforGeeks</h3>
+          <p>Programming, algorithms, data structures, and Computer Science topics.</p>
+          <div class="tags"><span>CS</span><span>ALGORITHMS</span></div>
+        </a>
+        <a class="card" href="https://www.w3schools.com/" target="_blank" rel="noopener">
+          <div class="icon">💻</div>
+          <h3>W3Schools</h3>
+          <p>Beginner-friendly tutorials and references for web technologies.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="eyebrow">PROJECTS</p>
+      <h2>Things I've built</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="project-number">01</div>
+          <div><h3>Java OOP Project</h3><p>A school project demonstrating classes, objects, inheritance, encapsulation, abstraction, and polymorphism.</p><span class="project-label">JAVA • OOP</span></div>
+        </article>
+        <article class="project">
+          <div class="project-number">02</div>
+          <div><h3>Student Portfolio</h3><p>A responsive personal website designed to introduce my background, skills, and projects.</p><span class="project-label">HTML • CSS • JAVASCRIPT</span></div>
+        </article>
+        <article class="project">
+          <div class="project-number">03</div>
+          <div><h3>Future Project</h3><p>This space is ready for my next school or personal project.</p><span class="project-label">COMING SOON</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Let's connect.</h2>
+      <p class="section-text">Have a project, school collaboration, or question? Send me a message.</p>
+      <form id="contactForm" action="https://formsubmit.co/naboraybales10@gmail.com" method="POST">
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+        <input id="email" name="email" type="email" placeholder="Your email" required>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+
+      <div class="socials" aria-label="Social links">
+        <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <span class="social-icon">f</span> Facebook
+        </a>
+        <a class="social-link" href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok">
+          <span class="social-icon">♪</span> TikTok
+        </a>
+        <a class="social-link" href="mailto:naboraybales10@gmail.com" aria-label="Email">
+          <span class="social-icon">✉</span> Email
+        </a>
+        <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <span class="social-icon">◎</span> Instagram
+        </a>
+      </div>
+      <p class="contact-note">Email: naboraybales10@gmail.com</p>
+      <p id="formStatus" class="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Jonelle N. Ybales. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+<script>
+const m=document.getElementById('menuBtn'),n=document.getElementById('navLinks');m.onclick=()=>{const open=n.classList.toggle('open');m.setAttribute('aria-expanded',open)};document.querySelectorAll('#navLinks a').forEach(a=>a.onclick=()=>n.classList.remove('open'));document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('.section').forEach(x=>x.classList.add('reveal'));const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>o.observe(x));
+document.getElementById('contactForm').onsubmit=e=>{const n=document.getElementById('name').value.trim();document.getElementById('formStatus').textContent=`Thanks, ${n}! Sending your message...`;};
+</script></body>
+</html>
